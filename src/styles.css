@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Franklin:wght@700;800&display=swap');
+
+:root { font-family: 'DM Sans', system-ui, sans-serif; color: #1c2822; background: #f4f0e6; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: radial-gradient(circle at 78% 5%, #e7dfc5 0, transparent 26%), #f4f0e6; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.site-shell { min-height: 100vh; display: flex; flex-direction: column; }
+header { height: 76px; padding: 0 max(24px, calc((100vw - 1080px)/2)); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #d8d1bf; }
+.brand { color: inherit; text-decoration: none; font-weight: 700; letter-spacing: -.03em; display: flex; align-items: center; gap: 11px; }
+.brand span { width: 33px; height: 33px; display: grid; place-items: center; color: #f7f3e9; background: #1c4a36; border-radius: 50% 50% 46% 54% / 58% 42% 58% 42%; font-family: Georgia, serif; }
+.header-note { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #607068; }
+main { width: min(100% - 40px, 880px); margin: auto; flex: 1; padding: 72px 0 80px; }
+.hero { text-align: center; }
+.eyebrow, .label { color: #a65336; font-size: 11px; font-weight: 800; letter-spacing: .17em; }
+h1 { font: 800 clamp(42px, 7vw, 72px)/1.06 'Libre Franklin', sans-serif; letter-spacing: -.065em; margin: 14px 0 20px; }
+h1 em { color: #1f6045; font-style: normal; }
+.intro { max-width: 590px; margin: 0 auto; color: #637068; font-size: 17px; line-height: 1.7; }
+.progress-wrap { max-width: 430px; margin: 34px auto 48px; }
+.progress-copy { display: flex; justify-content: space-between; color: #738078; font-size: 12px; margin-bottom: 9px; }
+.progress-copy strong { color: #1f6045; }
+.progress { height: 5px; border-radius: 10px; background: #ddd6c7; overflow: hidden; }
+.progress span { height: 100%; display: block; background: #be6d42; transition: width .3s; }
+.toolbar { display: flex; gap: 16px; justify-content: space-between; margin-bottom: 22px; }
+.categories { display: flex; gap: 7px; flex-wrap: wrap; }
+.categories button, .card-actions button, .navigator button { border: 1px solid #d4cdbd; color: #526159; background: rgba(255,255,255,.36); border-radius: 99px; padding: 9px 13px; }
+.categories button.active { color: white; background: #244c3a; border-color: #244c3a; }
+.categories small { opacity: .65; margin-left: 3px; }
+.search { width: 250px; display: flex; align-items: center; gap: 9px; padding: 0 13px; border: 1px solid #d4cdbd; border-radius: 99px; background: rgba(255,255,255,.4); color: #7c877f; }
+.search input { min-width: 0; width: 100%; height: 39px; border: 0; outline: 0; background: transparent; color: #27372e; }
+.practice-card { position: relative; padding: clamp(28px, 6vw, 56px); border: 1px solid #d8d0bd; background: rgba(255,253,247,.78); border-radius: 28px; box-shadow: 0 18px 55px rgba(62,50,30,.08); overflow: hidden; }
+.practice-card:before { content: ''; position: absolute; right: -70px; top: -80px; width: 220px; height: 220px; border: 1px solid #e0d7c2; border-radius: 50%; }
+.card-meta { display: flex; justify-content: space-between; align-items: center; color: #9a8f7c; font: 600 11px monospace; }
+.pill { padding: 6px 10px; color: #2f664d; background: #e5eee7; border-radius: 20px; font-family: 'DM Sans'; }
+.phrase-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 38px; }
+.label { margin: 0 0 11px; }
+h2 { margin: 0; font: 800 clamp(30px, 6vw, 52px)/1.12 'Libre Franklin', sans-serif; letter-spacing: -.055em; }
+.round { flex: 0 0 auto; width: 52px; height: 52px; border: 0; color: white; background: #be6d42; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 8px 20px #be6d4240; }
+.round:hover { transform: translateY(-2px); }
+.meaning { margin: 16px 0 35px; color: #8f563e; font-size: 18px; }
+.explanation { border-top: 1px solid #ded7c8; padding: 28px 0; display: grid; grid-template-columns: 120px 1fr; gap: 24px; }
+.explanation span, .example span { color: #859087; font-size: 12px; font-weight: 700; }
+.explanation p, .example p { margin: 0; line-height: 1.6; }
+.example { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 17px; padding: 20px; color: #244c3a; background: #edf0e8; border-radius: 16px; }
+.example span { display: block; margin-bottom: 4px; }
+.example button { border: 0; border-bottom: 1px solid; color: #8f563e; background: none; padding: 4px 0; font-size: 12px; }
+.card-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 27px; }
+.card-actions button { display: flex; align-items: center; gap: 7px; }
+.card-actions button.selected { color: #a65336; border-color: #d6aa96; }
+.card-actions button.learned { color: white; background: #2f664d; border-color: #2f664d; }
+.navigator { display: grid; grid-template-columns: 1fr auto auto 1fr; align-items: center; gap: 10px; margin-top: 22px; }
+.navigator button { display: flex; align-items: center; justify-content: center; gap: 3px; }
+.navigator button:last-child { justify-self: end; }
+.navigator span { color: #8d8a7f; font-size: 13px; min-width: 55px; text-align: center; }
+.navigator span b { color: #294a3a; }
+.navigator .shuffle { color: #a65336; }
+.empty { padding: 70px; text-align: center; border: 1px dashed #c8c0ae; border-radius: 24px; }
+.empty p { color: #78837c; }
+footer { padding: 25px max(24px, calc((100vw - 1080px)/2)); border-top: 1px solid #d8d1bf; display: flex; justify-content: space-between; color: #7d847d; font-size: 12px; }
+@media (max-width: 700px) {
+  header { height: 64px; } .header-note { display: none; } main { width: min(100% - 28px, 880px); padding-top: 50px; }
+  .toolbar { flex-direction: column; } .search { width: 100%; } .practice-card { border-radius: 22px; }
+  .explanation { grid-template-columns: 1fr; gap: 8px; } .example { grid-template-columns: auto 1fr; } .example button { grid-column: 2; justify-self: start; }
+  .navigator { grid-template-columns: 1fr auto 1fr; } .navigator .shuffle { grid-column: 1 / -1; grid-row: 2; justify-self: center; } footer { flex-direction: column; gap: 5px; }
+}
